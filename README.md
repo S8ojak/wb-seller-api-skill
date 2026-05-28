@@ -101,3 +101,13 @@ Structural drift in the English overlay is reported as a warning because Russian
 ## Source
 
 Swagger files are local snapshots of Wildberries Seller API documentation. Replace or regenerate the Swagger snapshots when Wildberries updates the API. Derived markdown references are intentionally not kept in this repository; generate them on demand with `scripts/wb_api.py generate`.
+
+---
+
+## RIDNESS Fork Notes
+
+This is an internal RIDNESS Project4 fork. See `NOTICE.md` for context.
+
+**Maintainers:** the Project4 team. Refresh via the `scripts/update-wb-skill.sh`
+helper in the Project4 repo when `wb_changelog` notifications signal an API
+change, and on the 1st of every month as a preventive check.
