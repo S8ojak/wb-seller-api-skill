@@ -1,0 +1,23 @@
+title = "RIDNESS gitleaks config for wb-seller-api-skill fork"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "wb-api-jwt"
+description = "Wildberries API JWT (eyJ-prefixed long string)"
+regex = '''eyJ[A-Za-z0-9_-]{40,}\.[A-Za-z0-9_-]{40,}\.[A-Za-z0-9_-]{40,}'''
+keywords = ["eyJ"]
+
+[[rules]]
+id = "ridness-postgres-url"
+description = "Project4 Postgres URL"
+regex = '''postgres(ql)?:\/\/[^:]+:[^@]+@[^/]+\/project4[a-z_]*'''
+keywords = ["postgres"]
+
+[allowlist]
+paths = [
+    '''(.*?)\.yaml$''',
+    '''(.*?)\.yml$''',
+]
+description = "WB swagger files contain example tokens like 'eyJhbGciOi...' in docs"
